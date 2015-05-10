@@ -1,5 +1,5 @@
 // define our application and pull in ngRoute and ngAnimate
-var scotchApp = angular.module('scotchApp', ['ngRoute', 'ngAnimate']); // create the module and name it scotchApp
+var scotchApp = angular.module('scotchApp', ['ngAnimate', 'ngRoute']); // create the module and name it scotchApp
 
 //routes
 scotchApp.config(function($routeProvider){
@@ -34,4 +34,19 @@ scotchApp.controller('aboutController', function($scope) {
 scotchApp.controller('contactController', function($scope) {
     $scope.message = 'Contact us! JK. This is just a demo.';
     $scope.pageClass = 'page-contact';
+});
+
+//var demoApp = angular.module('demo', ['ngAnimate'])
+
+scotchApp.controller('MainCtrl', function($scope) {
+
+  $scope.items = [];
+
+  $scope.push = function() {
+    $scope.items.push(+new Date());
+  };
+
+  $scope.pop = function() {
+    $scope.items.pop();
+  };
 });

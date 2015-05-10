@@ -5,7 +5,7 @@
     padding-top:200px;
     position:absolute;
     text-align:center;
-    top:0;
+    top: 66px;
     width:100%;
 }
 
@@ -60,10 +60,14 @@
     to      { transform: translateY(0); }
 }
 
-/*
-.ng-enter           { animation: scaleUp 0.5s both ease-in; z-index: 8888; }
-.ng-leave           { animation: slideOutLeft 0.5s both ease-in; z-index: 9999; }
-*/
+
+/*.animation.ng-enter           { animation: scaleUp 0.5s both ease-in; z-index: 8888; }*/
+/*.animation.ng-leave           { animation: slideOutLeft 0.5s both ease-in; z-index: 9999; }*/
+/*.animation.ng-enter.ng-enter-active           { animation: scaleUp 0.5s both ease-in; z-index: 8888; }*/
+/*.animation.ng-leave.ng-leave-active           { animation: slideOutLeft 0.5s both ease-in; z-index: 9999; }*/
+
+
+
 
 .ng-enter       { z-index: 8888; }
 .ng-leave       { z-index: 9999; }
@@ -71,13 +75,34 @@
 /* page specific animations ------------------------ */
 
 /* home -------------------------- */
-.page-home.ng-enter         { animation: scaleUp 0.5s both ease-in; }
-.page-home.ng-leave         { transform-origin: 0% 0%; animation: rotateFall 1s both ease-in; }
+/*.page-home.ng-enter         { animation: scaleUp 0.5s both ease-in; }*/
+/*.page-home.ng-leave         { transform-origin: 0% 0%; animation: rotateFall 1s both ease-in; }*/
 
 /* about ------------------------ */
-.page-about.ng-enter        { animation:slideInRight 0.5s both ease-in; }
-.page-about.ng-leave        { animation:slideOutLeft 0.5s both ease-in; }
+/*.page-about.ng-enter        { animation:slideInRight 0.5s both ease-in; }*/
+/*.page-about.ng-leave        { animation:slideOutLeft 0.5s both ease-in; }*/
 
 /* contact ---------------------- */
-.page-contact.ng-leave      { transform-origin: 50% 50%; animation: rotateOutNewspaper .5s both ease-in; }
-.page-contact.ng-enter      { animation:slideInUp 0.5s both ease-in; }
+/*.page-contact.ng-leave      { transform-origin: 50% 50%; animation: rotateOutNewspaper .5s both ease-in; }*/
+/*.page-contact.ng-enter      { animation:slideInUp 0.5s both ease-in; }*/
+
+
+
+
+/* PART 2 */
+
+.animation {
+  -webkit-transition: 1s;
+}
+.animation.ng-enter {
+  opacity: 0;
+}
+.animation.ng-leave {
+  opacity: 1;
+}
+.animation.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+.animation.ng-leave.ng-leave-active {
+  opacity: 0;
+}

@@ -16,7 +16,8 @@
     <script src="script.js"></script>
 
 </head>
-<body ng-controller="mainController">
+<body>
+<div ng-controller="mainController">
 
     <!-- HEADER AND NAVBAR -->
     <header>
@@ -37,11 +38,21 @@
 
     <!-- MAIN CONTENT AND INJECTED VIEWS -->
     <div id="main">
-
         <!-- angular templating -->
         <!-- this is where content will be injected -->
-        <div class="page {{ pageClass }}" ng-view></div>
+        <div class="page animation {{ pageClass }}" data-ng-view></div>
     </div>
 
-</body>
+    <!--<div ng-controller="MainCtrl">-->
+      <!--<h1>ngRepeat</h1>-->
+      <!--<p>-->
+        <!--<button ng-click="push()">Enter Animation</button>-->
+        <!--<button ng-click="pop()">Leave Animation</button>-->
+        <!--<hr>-->
+        <!--<ul>-->
+          <!--<li ng-repeat="item in items" class="animation">{{item}}</li>-->
+        <!--</ul>-->
+    <!--</div>-->
+
+</div></body>
 </html>
